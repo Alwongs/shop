@@ -16,8 +16,9 @@ class UpdateController extends Controller
         $data = $request->validated();
 
         // dd($data);
-
-        $data['preview_image'] = Storage::disk('public')->put('/images', $data['preview_image']);
+        if (isset($data['preview_image'])) {
+            $data['preview_image'] = Storage::disk('public')->put('/images', $data['preview_image']);
+        }
 
         $tagsIds = isset($data['tags']) ? $data['tags'] : [];
         $colorsIds = isset($data['colors']) ? $data['colors'] : [];
