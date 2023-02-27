@@ -26,6 +26,8 @@ class EditController extends Controller
             array_push($productColorIds, $productColor->id);
         }
 
+        // dd($product);
+
         return view('product.edit', compact('product', 'tags', 'colors', 'categories', 'productTagIds', 'productColorIds'));
     }
 }

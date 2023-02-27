@@ -23,8 +23,18 @@ class UpdateRequest extends FormRequest
      */
     public function rules()
     {
+        // dd('update request');
         return [
-            'title' => 'required|string'
+            'title' => 'nullable|string',
+            'description' => 'nullable',
+            'content' => 'nullable',
+            'preview_image' => 'nullable',
+            'price' => 'nullable',
+            'count' => 'nullable',
+            'is_published' => 'nullable',
+            'category_id' => 'nullable',
+            'tags' => 'nullable|array',
+            'colors' => 'nullable|array',
         ];
     }
 }

@@ -23,25 +23,24 @@
         <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
             <div class="row">
-                <form action="{{ route('product.update', $product->id) }}" method="post">
+                <form action="{{ route('product.update', $product->id) }}" method="post" enctype="multipart/form-data">
                     @csrf
                     @method('patch')
                     <div class="form-group">
-                        <input type="text" name="title" value="{{ $product->title }}" class="form-control" placeholder="Наименование">
+                        <input type="text" name="title" value="{{ $product->title }}" class="form-control" placeholder="Наименование" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="description" value="{{ $product->description }}" class="form-control" placeholder="Описание">
+                        <input type="text" name="description" value="{{ $product->description }}" class="form-control" placeholder="Описание" required>
                     </div>
                     <div class="form-group">
-                        <textarea name="content" cols="30" rows="10" class="form-control" placeholder="Контент">{{ $product->content }}</textarea>
+                        <textarea name="content" cols="30" rows="10" class="form-control" placeholder="Контент" required>{{ $product->content }}</textarea>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="price" value="{{ $product->price }}" class="form-control" placeholder="Цена">
+                        <input type="text" name="price" value="{{ $product->price }}" class="form-control" placeholder="Цена" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="count" value="{{ $product->count }}" class="form-control" placeholder="Количество">
+                        <input type="text" name="count" value="{{ $product->count }}" class="form-control" placeholder="Количество" required>
                     </div>
-
 
                     <div class="form-group">
                         <div class="input-group">
@@ -54,7 +53,6 @@
                             </div>
                         </div>
                     </div>                    
-
 
                     <div class="form-group">
                         <select name="category_id" class="form-control select2" style="width: 100%;">
