@@ -86,10 +86,10 @@
             </div>
             <!-- /.row -->
 
-<!-- 
+
             <ul style="color:red;" class="p-5">
-                <li>элемент</li>
-            </ul> -->
+                <li>Подключить новое поле old_price в проекте</li>
+            </ul>
 
 
 

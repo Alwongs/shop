@@ -14,14 +14,17 @@ class Product extends Model
     {
         return $this->belongsToMany(Tag::class);
     }  
-    
     public function colors()
     {
         return $this->belongsToMany(Color::class);
     }        
-    
     public function category()
     {
         return $this->belongsTo(Category::class);
-    }        
+    } 
+    
+    public function getImageUrlAttribute()
+    {
+        return url('storage/' . $this->preview_image);
+    }
 }
