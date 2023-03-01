@@ -86,9 +86,10 @@
             </div>
             <!-- /.row -->
 
-            <div class="row">
-                <h1 style="color:red;" class="p-5">Не работает обновление Product. Попробовать onUpdate('cascade')</h1>
-            </div>
+<!-- 
+            <ul style="color:red;" class="p-5">
+                <li>элемент</li>
+            </ul> -->
 
 
 
