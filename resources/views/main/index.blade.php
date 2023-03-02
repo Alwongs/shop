@@ -88,7 +88,7 @@
 
 
             <ul style="color:red;" class="p-5">
-                <li>Подключить новое поле old_price в проекте</li>
+                <li><del>Подключить новое поле old_price в проекте</del></li>
             </ul>
 
 

@@ -66,3 +66,13 @@ Route::group(['prefix' => 'products'], function() {
     Route::delete('/{product}', \App\Http\Controllers\Product\DeleteController::class)->name('product.delete');
 });
 
+Route::group(['prefix' => 'groups'], function() {
+    Route::get('/', \App\Http\Controllers\Group\IndexController::class)->name('group.index');
+    Route::get('/create', \App\Http\Controllers\Group\CreateController::class)->name('group.create');
+    Route::post('/', \App\Http\Controllers\Group\StoreController::class)->name('group.store');
+    Route::get('/{group}/edit', \App\Http\Controllers\Group\EditController::class)->name('group.edit');
+    Route::get('/{group}', \App\Http\Controllers\Group\ShowController::class)->name('group.show');
+    Route::patch('/{group}', \App\Http\Controllers\Group\UpdateController::class)->name('group.update');
+    Route::delete('/{group}', \App\Http\Controllers\Group\DeleteController::class)->name('group.delete');
+});
+

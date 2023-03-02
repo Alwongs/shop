@@ -4,9 +4,10 @@ namespace App\Http\Resources\Product;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 use App\Http\Resources\Category\CategoryResource;
+use App\Http\Resources\Color\ColorResource;
 use App\Models\Product;
 
-class ProductResource extends JsonResource
+class ProductMinResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -29,9 +30,8 @@ class ProductResource extends JsonResource
             'old_price' => $this->old_price,
             'count' => $this->count,
             'is_published' => $this->title,
-            'category' => new CategoryResource($this->category),     
-            'group_products' => ProductMinResource::collection($products),
-
+            'category' => new CategoryResource($this->category), 
+            'colors' => ColorResource::collection($this->colors)            
         ];
     }
 }
