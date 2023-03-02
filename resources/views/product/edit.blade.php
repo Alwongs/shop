@@ -36,6 +36,9 @@
                         <textarea name="content" cols="30" rows="10" class="form-control" placeholder="Контент" required>{{ $product->content }}</textarea>
                     </div>
                     <div class="form-group">
+                        <input type="text" name="old_price" value="{{ $product->old_price }}" class="form-control" placeholder="Старая цена" required>
+                    </div>
+                    <div class="form-group">
                         <input type="text" name="price" value="{{ $product->price }}" class="form-control" placeholder="Цена" required>
                     </div>
                     <div class="form-group">
