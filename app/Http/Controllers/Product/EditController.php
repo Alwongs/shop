@@ -7,6 +7,7 @@ use App\Models\Product;
 use App\Models\Tag;
 use App\Models\Color;
 use App\Models\Category;
+use App\Models\Group;
 
 class EditController extends Controller
 {
@@ -16,6 +17,7 @@ class EditController extends Controller
         $tags = Tag::all();
         $colors = Color::all();
         $categories = Category::all();
+        $groups = Group::all();
 
         $productTagIds = [];
         $productColorIds = [];
@@ -28,6 +30,6 @@ class EditController extends Controller
 
         // dd($product);
 
-        return view('product.edit', compact('product', 'tags', 'colors', 'categories', 'productTagIds', 'productColorIds'));
+        return view('product.edit', compact('product', 'tags', 'colors', 'categories', 'groups', 'productTagIds', 'productColorIds'));
     }
 }

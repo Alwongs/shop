@@ -17,9 +17,9 @@ class StoreController extends Controller
 
         $data['preview_image'] = Storage::disk('public')->put('/images', $data['preview_image']);
 
-        $tagsIds = $data['tags'];
-        $colorsIds = $data['colors'];
-        unset($data['tags'], $data['colors']);
+        $tagsIds = isset($data['tags']) ? $data['tags'] : [];
+        $colorsIds = isset($data['colors']) ? $data['colors'] : [];
+        unset($data['tags'], $data['colors']);        
 
         $product = Product::firstOrCreate([
             'title' => $data['title']

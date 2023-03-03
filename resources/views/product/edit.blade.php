@@ -56,12 +56,20 @@
                             </div>
                         </div>
                     </div> 
-                                     
 
                     <div class="form-group">
                         <select name="category_id" class="form-control select2" style="width: 100%;">
                             @foreach($categories as $category)
                                 <option value="{{ $category->id }}" @if ($category == $product->category) selected="selected" @endif>{{ $category->title }}</option>
+                            @endforeach
+                        </select>
+                    </div>                                     
+
+                    <div class="form-group">
+                        <select name="group_id" class="form-control select2" style="width: 100%;">
+                            <option selected="selected" disabled>Выберите группу</option>
+                            @foreach($groups as $group)
+                                <option value="{{ $group->id }}" @if ($group == $product->group) selected="selected" @endif>{{ $group->title }}</option>
                             @endforeach
                         </select>
                     </div>
