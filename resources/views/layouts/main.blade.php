@@ -34,6 +34,10 @@
             </li>
             </ul>
 
+            <ul class="my-notification-block" style="list-style:none;">
+                <li style="color:red; font-size: 120%;">Реализовать удаление изображений</li>
+            </ul>
+
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
             <!-- Messages Dropdown Menu -->
