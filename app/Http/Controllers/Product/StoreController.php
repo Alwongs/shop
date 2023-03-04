@@ -16,10 +16,10 @@ class StoreController extends Controller
     {
         $data = $request->validated();
 
-        $productImages = $data['product_images'];
+        
+        $data['preview_image'] = Storage::disk('public')->put('/images/preview-images', $data['preview_image']);
 
-        $data['preview_image'] = Storage::disk('public')->put('/images', $data['preview_image']);
-
+        $productImages = isset($data['product_images']) ? $data['product_images'] : [];        
         $tagsIds = isset($data['tags']) ? $data['tags'] : [];
         $colorsIds = isset($data['colors']) ? $data['colors'] : [];
         unset($data['tags'], $data['colors'], $data['product_images']);        
@@ -35,19 +35,17 @@ class StoreController extends Controller
                 'tag_id' => $tagsId
             ]);
         }
-
         foreach ($colorsIds as $colorsId) {
             ColorProduct::firstOrCreate([
                 'product_id' => $product->id,
                 'color_id' => $colorsId
             ]);
         }
-
         foreach ($productImages as $productImage) {
-            $currentImages = ProductImage::where('product_id', $product->id)->get();
+            $currentImagesCount = ProductImage::where('product_id', $product->id)->count();
 
-            if(count($currentImages) > 3) continue;
-            $filePath = Storage::disk('public')->put('/images', $productImage);
+            if($currentImagesCount > 3) continue;
+            $filePath = Storage::disk('public')->put('/images/product-images', $productImage);
             ProductImage::create([
                 'product_id' => $product->id,
                 'file_path' => $filePath,

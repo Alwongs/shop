@@ -85,14 +85,6 @@
                 <!-- ./col -->
             </div>
             <!-- /.row -->
-
-
-            <ul style="color:red;" class="p-5">
-                <li><del>Подключить новое поле old_price в проекте</del></li>
-            </ul>
-
-
-
         </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->

@@ -34,10 +34,6 @@
             </li>
             </ul>
 
-            <ul class="my-notification-block" style="list-style:none;">
-                <li style="color:red; font-size: 120%;">Реализовать удаление изображений</li>
-            </ul>
-
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
             <!-- Messages Dropdown Menu -->
@@ -132,7 +128,7 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="index3.html" class="brand-link">
+            <a href="{{ route('main.index') }}" class="brand-link">
             <span class="brand-text font-weight-light">Магазинчик</span>
             </a>
 
@@ -145,50 +141,59 @@
 
                 <li class="nav-item">
                     <a href="pages/gallery.html" class="nav-link">
-                    <i class="nav-icon fas fa-shopping-bag"></i>
-                    <p>Заказы</p>
+                        <i class="nav-icon fas fa-shopping-bag"></i>
+                        <p>Заказы</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a href="{{ route('product.index') }}" class="nav-link">
-                    <i class="nav-icon fas fa-tshirt"></i>              
-                    <p>Продукты</p>
+                        <i class="nav-icon fas fa-tshirt"></i>              
+                        <p>Продукты</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a href="{{ route('group.index') }}" class="nav-link">
-                    <i class="nav-icon fas fa-list"></i>
-                    <p>Группы</p>
+                        <i class="nav-icon fas fa-list"></i>
+                        <p>Группы</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a href="{{ route('category.index') }}" class="nav-link">
-                    <i class="nav-icon fas fa-list"></i>
-                    <p>Категории</p>
+                        <i class="nav-icon fas fa-list"></i>
+                        <p>Категории</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a href="{{ route('tag.index') }}" class="nav-link">
-                    <i class="nav-icon fas fa-tags"></i>
-                    <p>Теги</p>
+                        <i class="nav-icon fas fa-tags"></i>
+                        <p>Теги</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a href="{{ route('color.index') }}" class="nav-link">
-                    <i class="nav-icon fas fa-palette"></i>
-                    <p>Цвета</p>
+                        <i class="nav-icon fas fa-palette"></i>
+                        <p>Цвета</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a href="{{ route('user.index') }}" class="nav-link">
-                    <i class="nav-icon fas fa-users"></i>
-                    <p>Пользователи</p>
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>Пользователи</p>
+                    </a>
+                </li>
+                <div style="width: 100%; border-bottom: 1px solid grey;" class="m-2"></div>
+
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link" style="cursor: default">                
+                        <i class="nav-icon fas fa-hammer"></i>
+                        <p style="color: yellow; font-size: 90%;">Сделать фильтры</p>
                     </a>
                 </li>
 

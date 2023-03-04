@@ -55,7 +55,8 @@
                                 <span class="input-group-text">Загрузка</span>
                             </div>
                         </div>
-                    </div>                    
+                    </div>  
+                    <hr>                   
 
 
                     <div class="form-group">
@@ -92,7 +93,8 @@
                                 <span class="input-group-text">Загрузка</span>
                             </div>
                         </div>
-                    </div>                    
+                    </div>  
+                    <hr>                   
 
 
                     <div class="form-group">

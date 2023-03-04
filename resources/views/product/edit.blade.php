@@ -56,6 +56,47 @@
                             </div>
                         </div>
                     </div> 
+                    <hr>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input name="product_images[]" type="file" class="custom-file-input" id="exampleInputFile">
+                                <label class="custom-file-label" for="exampleInputFile">Выберите файл</label>
+                            </div>
+                            <div class="input-group-append">
+                                <span class="input-group-text">Загрузка</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input name="product_images[]" type="file" class="custom-file-input" id="exampleInputFile">
+                                <label class="custom-file-label" for="exampleInputFile">Выберите файл</label>
+                            </div>
+                            <div class="input-group-append">
+                                <span class="input-group-text">Загрузка</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input name="product_images[]" type="file" class="custom-file-input" id="exampleInputFile">
+                                <label class="custom-file-label" for="exampleInputFile">Выберите файл</label>
+                            </div>
+                            <div class="input-group-append">
+                                <span class="input-group-text">Загрузка</span>
+                            </div>
+                        </div>
+                    </div>   
+                    <hr>                                      
+
+
+
 
                     <div class="form-group">
                         <select name="category_id" class="form-control select2" style="width: 100%;">
@@ -67,7 +108,6 @@
 
                     <div class="form-group">
                         <select name="group_id" class="form-control select2" style="width: 100%;">
-                            <option selected="selected" disabled>Выберите группу</option>
                             @foreach($groups as $group)
                                 <option value="{{ $group->id }}" @if ($group == $product->group) selected="selected" @endif>{{ $group->title }}</option>
                             @endforeach
@@ -89,7 +129,6 @@
                             @endforeach
                         </select>
                     </div>
-
 
                     <div class="form-group">
                         <input type="submit" class="btn btn-primary" value="Обновить">

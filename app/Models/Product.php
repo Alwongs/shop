@@ -4,9 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Traits\Filterable;
 
 class Product extends Model
 {
+
+    use Filterable;
+
     protected $table = 'products';
     protected $guarded = false;
 
@@ -21,6 +25,10 @@ class Product extends Model
     public function category()
     {
         return $this->belongsTo(Category::class);
+    } 
+    public function group()
+    {
+        return $this->belongsTo(Group::class);
     } 
     public function productImages()
     {
